@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main(){
+void function(){
+    int x=10;
+    static y=10;
+    x=x+1;
+    y=y+1;
+    printf("%d %d \n",x,y);
+    
+}
+function();
+return 0;
+}
