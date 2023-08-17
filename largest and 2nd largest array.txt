@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int a[100],n,i,largest,second_large;
+    printf("Enter limit:");
+    scanf("%d",&n);
+    printf("Enter the values of the array:");
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+   largest=a[0];
+   second_large=a[1];
+   for(i=0;i<n;i++){
+       if(a[i]>largest){
+           second_large=largest;
+           largest=a[i];
+       }
+       else if(a[i]>second_large && a[i]!=largest){
+           second_large=a[i];
+       }
+   }
+   printf("largest value is:%d , second largest value is:%d",largest,second_large);
+    return 0;
