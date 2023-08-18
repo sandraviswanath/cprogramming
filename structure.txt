@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+struct a{
+    int number;
+    char name[];
+}b;
+
+int main() {
+    b.number=1;
+    printf("num%d \n",b.number);
+    strcpy(b.name,"sandra");
+    printf("name%s ",b.name);
+    
+
+    return 0;
+}
