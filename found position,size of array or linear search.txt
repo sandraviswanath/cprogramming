@@ -1,0 +1,28 @@
+#include <stdio.h>
+int findelement(int a[],int n,int key){
+    int i;
+    for(i<0;i<n;i++){
+        if(a[i]==key){
+            return i;
+        }
+        
+        
+    }
+    return -1;
+}
+int main() {
+    int a[]={10,40,30,80};
+    int n=sizeof(a)/sizeof(a[0]);
+    int key=80;
+int position=findelement(a,n,key);
+if(position==-1){
+    printf("element not found");
+    
+}
+    else{
+        printf("elemnet found at position %d ",position+1);
+    }
+    
+
+    return 0;
+}
