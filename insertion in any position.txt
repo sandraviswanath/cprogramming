@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int insertion(int a[10],int pos,int n,int x){
+    int i;
+    for(i=n-1;i>=pos;i--){
+        a[i+1]=a[i];
+        
+    }
+    a[pos]=x;
+}
+
+
+
+int main() {
+    int i,n,pos,x;
+    int a[10]={2,3,5,4};
+    n=4;
+    x=10;
+    pos=2;
+    printf("array before insertion:");
+    for(i=0;i<n;i++){
+        printf("%d",a[i]);
+        
+    }
+    insertion(a,pos,n,x);
+    n++;
+    printf("\narray after insertion");
+for(i=0;i<n;i++){
+    printf("%d",a[i]);
+}
+    return 0;
+}
