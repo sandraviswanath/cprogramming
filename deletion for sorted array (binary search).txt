@@ -1,0 +1,47 @@
+#include <stdio.h>
+int position(int x,int right,int left,int a[]){
+    if (right < left){
+        return -1;
+    }
+    int mid = (left + right) / 2;
+    if (x == a[mid]){
+        return mid;
+    }
+    if (x > a[mid]){
+        return position(x, right,(mid + 1), a);
+    }
+    return position(x,(mid - 1),left,a);
+
+    
+}
+
+int deletion(int n,int x,int a[]){
+    int i,pos;
+    pos= position( x,n-1,0,a);
+    if(pos== -1){
+        printf("not found");
+        return n;}
+        for(i=pos;i<n-1;i++){
+            a[i]=a[i+1];
+        }
+        return n-1;
+    }
+
+
+
+int main() {
+    int i,n,x;
+    int a[10]={12,24,45,56,62};
+    n=5;
+    x=24;
+    printf("array before deletion:");
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    n=deletion(n,x,a);
+    printf("\nafter deletion:");
+    for(i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    return 0;
+}

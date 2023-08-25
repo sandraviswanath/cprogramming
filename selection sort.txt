@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int i,j,n,temp,min;
+  
+    int a[10]={10,23,4,7,90};
+    printf("before sortig");
+   int c =sizeof(a)/sizeof(a[0]);
+    n=5;
+    for(i=0;i<n;i++){
+    printf("%d ",a[i]);
+}
+    for(i=0;i<n-1;i++){
+          min=i;
+        for(j=i+1;j<n;j++){
+            if(a[j]<a[min]){
+                min=j;
+            }
+        }
+            if(min!=i){
+        temp=a[i];
+        a[i]=a[min];
+        a[min]=temp;
+            }
+    }
+printf("\nafter selection sorting");
+for(i=0;i<n;i++){
+    printf("%d ",a[i]);
+}
+    return 0;
+}
